@@ -24,6 +24,8 @@ INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     "catalog",
     "emails",
+    "cloudinary",
+    "cloudinary_storage",
 ]
 
 # Middleware
@@ -98,3 +100,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 # Login/Logout redirects
 LOGIN_REDIRECT_URL = "emails:home"
 LOGOUT_REDIRECT_URL = "emails:home"
+
+
+CLOUDINARY_STORAGE = {
+    "CLOUD_NAME": "TemplaSocial",
+    "API_KEY": "397596964132176",
+    "API_SECRET": "ce7jbzcm6Xb79-96AUplv4MImFc",
+}
+
+DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
