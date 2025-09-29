@@ -103,9 +103,9 @@ LOGOUT_REDIRECT_URL = "emails:home"
 
 
 CLOUDINARY_STORAGE = {
-    "CLOUD_NAME": "TemplaSocial",
-    "API_KEY": "397596964132176",
-    "API_SECRET": "ce7jbzcm6Xb79-96AUplv4MImFc",
+    "CLOUD_NAME": os.environ.get("CLOUDINARY_CLOUD_NAME"),
+    "API_KEY": os.environ.get("CLOUDINARY_API_KEY"),
+    "API_SECRET": os.environ.get("CLOUDINARY_API_SECRET"),
 }
 
 DEFAULT_FILE_STORAGE = "cloudinary_storage.storage.MediaCloudinaryStorage"
